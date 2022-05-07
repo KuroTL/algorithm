@@ -1,4 +1,4 @@
-package com.ixiaoyu2.primary.Class16;
+package com.ixiaoyu2.primary.class16;
 
 import java.util.ArrayList;
 import java.util.HashSet;

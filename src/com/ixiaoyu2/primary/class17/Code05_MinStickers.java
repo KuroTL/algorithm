@@ -1,4 +1,4 @@
-package com.ixiaoyu2.primary.code17;
+package com.ixiaoyu2.primary.class17;
 
 import java.util.HashMap;
 

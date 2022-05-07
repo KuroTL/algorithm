@@ -1,4 +1,4 @@
-package com.ixiaoyu2.primary.code17;
+package com.ixiaoyu2.primary.class17;
 
 /**
  * @author :Administrator
@@ -64,7 +64,7 @@ public class Code17_SplitNumber {
 
 
     // 以上递归枚举行为进行优化
-    
+
     public static int splitNumber3(int n) {
         if (n < 0) {
             return 0;
