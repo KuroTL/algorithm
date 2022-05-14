@@ -22,13 +22,20 @@ public class KMP {
 
         // next[i] i位置之前，0~i-1,前缀与后缀字符串相匹配的最大长度
         int[] next = getNextArray(mChars);
+
+
         while (sIndex < sChars.length && mIndex < mChars.length) {
+
+            // 如果sIndex位置与mIndex位置匹配，则都前进
             if (sChars[sIndex] == mChars[mIndex]) {
                 sIndex++;
                 mIndex++;
-            } else if (next[mIndex] == -1) {
+            }
+            //  如果mIndex=0,还无法配置，sIndex前进，m字符串从0开始匹配
+            else if (next[mIndex] == -1) {
                 sIndex++;
             } else {
+                // 否则从next[mIndex] 位子开始匹配
                 mIndex = next[mIndex];
             }
         }
