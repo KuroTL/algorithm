@@ -49,17 +49,22 @@ public class Code02_MinHeight {
         }
         Node cur = head;
         Node mostRight = null;
+        // 当前节点层数
         int curLevel = 0;
+        // 最小高度
         int minHeight = Integer.MAX_VALUE;
+        // Morris遍历
         while (cur != null) {
             mostRight = cur.left;
             if (mostRight != null) {
+                // 右节点的个数
                 int rightBoardSize = 1;
                 while (mostRight.right != null && mostRight.right != cur) {
                     rightBoardSize++;
                     mostRight = mostRight.right;
                 }
-                if (mostRight.right == null) { // 第一次到达
+                // 第一次到达
+                if (mostRight.right == null) {
                     curLevel++;
                     mostRight.right = cur;
                     cur = cur.left;
@@ -71,7 +76,8 @@ public class Code02_MinHeight {
                     curLevel -= rightBoardSize;
                     mostRight.right = null;
                 }
-            } else { // 只有一次到达
+            } else {
+                // 只有一次到达
                 curLevel++;
             }
             cur = cur.right;
@@ -82,7 +88,7 @@ public class Code02_MinHeight {
             finalRight++;
             cur = cur.right;
         }
-        if (cur.left == null && cur.right == null) {
+        if (cur.left == null) {
             minHeight = Math.min(minHeight, finalRight);
         }
         return minHeight;
