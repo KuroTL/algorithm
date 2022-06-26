@@ -6,6 +6,7 @@ package com.ixiaoyu2.primary.class28;
  * @author :Long
  * @date :2022/6/17 0017
  */
+@SuppressWarnings("ALL")
 public class Code01_VALTreeMap {
 
 
@@ -394,9 +395,5 @@ public class Code01_VALTreeMap {
             }
             return cur;
         }
-
-
     }
-
-
 }
